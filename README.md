@@ -10,7 +10,7 @@ and may be used to reproduce the MNIST results of that paper. The code is writte
 
 Running `sbn_experiment.py` by default trains a 200-200-10 sigmoid belief network (a three-layer network with 200 units in the first layer, 200 units in the second layer, and 10 units in the 'top' layer). These parameters are easy to modify. 
 
-The Keras library should automatically install and make available the binarized MNIST dataset. 
+Keras should automatically download the binarized MNIST dataset. 
 
 After each epoch (pass through the data), the code writes out a Pickle file that saves the current best state of the model; the file name is set by the `fnam` variable in `sbn_experiment.py`. 
 
