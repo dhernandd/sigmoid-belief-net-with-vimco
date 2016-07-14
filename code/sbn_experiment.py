@@ -39,8 +39,8 @@ yDim = 28*28 # number of output variables (one for each pixel)
 # file name for output
 fnam = 'sbn_best_validation_so_far.pkl'
 # construct a dummy model 
-gen_dict = dict({'layer_size':[100]})
-rec_dict = dict({'layer_size':[100]})
+gen_dict = dict({'layer_size':[200, 200]})
+rec_dict = dict({'layer_size':[200, 200]})
 model = VIMCO(gen_dict, SigmoidGenerative, rec_dict, SigmoidRecognition, xDim, yDim, filename = fnam, initial_patience = 10000)
 
 costs = model.fit(X_train, y_valid=X_valid, batch_size = 24, max_epochs = 10, nSamp = 10, learning_rate=3e-3)
